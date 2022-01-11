@@ -3,7 +3,7 @@ from sqlalchemy.types import String, Integer, Text
 from database import Base
 
 class Task(Base):
-    __tablename__ = "Tasks2"
+    __tablename__ = "Tasks"
     id = Column(Integer, primary_key=True, index=True)
     task_name = Column(String(20))
     task_des = Column(Text())
