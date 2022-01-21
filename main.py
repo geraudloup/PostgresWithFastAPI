@@ -8,8 +8,8 @@ from session import create_get_session
 
 app = FastAPI()
 
-@app.get("/")
-def read_root():
+@app.get("/", tags=["Root"])
+def read_root()-> dict:
     return {"message": "welcome to FastAPI!"}
 
 @app.get("/task", response_model=List[task_schema], status_code=200)
